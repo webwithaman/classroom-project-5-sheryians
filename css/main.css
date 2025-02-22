@@ -7,8 +7,9 @@
   background-color: #000;
   color: #fff;
   font-size: 1.3rem;
-  font-weight: 600;
-  padding: 0.7em 0.9em;
+  font-weight: 400;
+  padding: 0.8em 1.5em;
+  letter-spacing: 0.2px;
   border-radius: 2rem;
   text-transform: uppercase;
 }
@@ -34,7 +35,7 @@ html {
 body {
   overflow-x: hidden;
   color: #000;
-  height: 800px;
+  height: 8000px;
 }
 
 a {
@@ -65,7 +66,7 @@ h6 {
 }
 
 .site-wrapper {
-  padding: 2rem;
+  padding-inline: 2.3rem;
 }
 
 .navbar {
@@ -73,7 +74,7 @@ h6 {
   justify-content: space-between;
   align-items: center;
   position: relative;
-  padding-bottom: 2rem;
+  padding-block: 2.2rem;
 }
 .navbar .logo {
   width: 6rem;
@@ -153,6 +154,53 @@ h6 {
   transition: all 0.2s ease-out;
 }
 
+.hero .hero-top-text > div {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+.hero .hero-top-text > div p {
+  font-size: 1.3rem;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+.hero .hero-bottom {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.hero .hero-bottom .hero-bottom-img {
+  aspect-ratio: 1;
+}
+.hero .hero-bottom .hero-bottom-img img {
+  height: 100%;
+}
+.hero .hero-bottom .hero-bottom-text h1 {
+  font-size: 4rem;
+  font-weight: 360;
+  line-height: 1;
+}
+.hero .hero-bottom .hero-bottom-text p {
+  font-size: 1.8rem;
+  font-weight: 360;
+  margin-block: 2rem 4rem;
+}
+.hero .hero-bottom .hero-bottom-text .hero-bottom-services {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.hero .hero-bottom .hero-bottom-text .hero-bottom-services .service {
+  display: flex;
+  justify-content: space-between;
+}
+.hero .hero-bottom .hero-bottom-text .hero-bottom-services .service h4 {
+  font-size: 2.7rem;
+  font-weight: 360;
+}
+
 /* General Styles for screen size <= 300px */
 @media screen and (max-width: 300px) {
   html {
@@ -174,10 +222,31 @@ h6 {
     font-size: 25%;
   }
 }
+/* General Styles for screen size >= 490px */
+@media screen and (min-width: 490px) {
+  .site-wrapper {
+    padding-inline: 3rem;
+  }
+  .navbar .navbar-right .toggle-btns button {
+    display: initial;
+  }
+}
+/* General Styles for screen size >= 768px */
+@media screen and (min-width: 768px) {
+  .site-wrapper {
+    padding-inline: 5rem;
+  }
+  .navbar {
+    padding-block: 2.5rem;
+  }
+}
 /* General Styles for screen size >= 1200px */
-@media screen and (min-width: 1200px) {
-  .primary-btn {
-    padding: 0.8em 1.5em;
+@media screen and (min-width: 990px) {
+  .site-wrapper {
+    padding-inline: 6rem;
+  }
+  .navbar {
+    padding-block: 3.5rem;
   }
   .navbar .navbar-right .nav-links {
     display: revert;
@@ -218,5 +287,26 @@ h6 {
   }
   .navbar .navbar-right .toggle-btns .toggle-bar {
     display: none;
+  }
+  .hero .hero-top-text > div {
+    margin-top: 1.3rem;
+  }
+  .hero .hero-bottom {
+    margin-top: 5rem;
+    flex-direction: row-reverse;
+    gap: 5rem;
+  }
+  .hero .hero-bottom .hero-bottom-img {
+    flex: 1;
+  }
+  .hero .hero-bottom .hero-bottom-text {
+    flex: 1;
+  }
+  .hero .hero-bottom .hero-bottom-text h1 {
+    font-size: 5.4vw;
+  }
+  .hero .hero-bottom .hero-bottom-text p {
+    font-size: 2.2rem;
+    margin-block: 2rem 4rem;
   }
 }

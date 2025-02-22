@@ -23,14 +23,44 @@
   }
 }
 
+/* General Styles for screen size >= 490px */
+@media screen and (min-width: 490px) {
+  .site-wrapper {
+    padding-inline: 3rem;
+  }
+
+  .navbar {
+    .navbar-right {
+      .toggle-btns {
+        button {
+          display: initial;
+        }
+      }
+    }
+  }
+}
+
+/* General Styles for screen size >= 768px */
+@media screen and (min-width: 768px) {
+  .site-wrapper {
+    padding-inline: 5rem;
+  }
+
+  .navbar {
+    padding-block: 2.5rem;
+  }
+}
+
 /* General Styles for screen size >= 1200px */
-@media screen and (min-width: 1200px) {
-  .primary-btn {
-    padding: 0.8em 1.5em;
+@media screen and (min-width: 990px) {
+  .site-wrapper {
+    padding-inline: 6rem;
   }
 
   // Navbar Start
   .navbar {
+    padding-block: 3.5rem;
+
     .navbar-right {
       .nav-links {
         display: revert;
@@ -84,4 +114,38 @@
     }
   }
   // Navbar End
+
+  // Hero Section Start
+  .hero {
+    .hero-top-text {
+      & > div {
+        margin-top: 1.3rem;
+      }
+    }
+
+    .hero-bottom {
+      margin-top: 5rem;
+      flex-direction: row-reverse;
+      gap: 5rem;
+
+      .hero-bottom-img {
+        flex: 1;
+      }
+
+      .hero-bottom-text {
+        flex: 1;
+
+        h1 {
+          font-size: calc(5.4vw, 5.4vw, 110px);
+        }
+
+        p {
+          font-size: 2.2rem;
+          font-weight: bold;
+          margin-block: 2rem 4rem;
+        }
+      }
+    }
+  }
+  // Hero Section End
 }
