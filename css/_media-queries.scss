@@ -387,7 +387,7 @@
   .clients {
     padding-block: 6.5rem;
 
-    img {
+    img.clients-heading {
       width: 30%;
       display: block;
       margin-left: auto;
@@ -398,7 +398,11 @@
       margin-left: auto;
 
       .client-data {
+        flex-direction: row;
+
         & > div {
+          flex-direction: row;
+
           h5 {
             font-size: clamp(10px, 2.5vw, 32px);
           }
@@ -410,8 +414,16 @@
 
   // Team Section Start
   .team {
+    padding-block: 6.4rem;
+
     .team-members {
       grid-template-columns: repeat(4, 1fr);
+
+      .team-member {
+        h5 {
+          font-size: clamp(10px, 1.75vw, 24px);
+        }
+      }
     }
   }
   // Team Section End

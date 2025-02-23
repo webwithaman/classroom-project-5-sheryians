@@ -332,7 +332,7 @@ p {
 // Selected Work Section Start
 .selected-work {
   padding-top: 3rem;
-  border-top: 1px solid rgba(128, 128, 128, 0.244);
+  border-top: 1.2px solid rgba(128, 128, 128, 0.244);
   display: flex;
   flex-direction: column;
   gap: 3rem;
@@ -403,6 +403,7 @@ p {
     .client-data {
       display: flex;
       flex-direction: column;
+      align-items: center;
       gap: 1.5rem;
 
       p {
@@ -413,6 +414,7 @@ p {
       & > div {
         display: flex;
         flex-direction: column;
+        align-items: center;
         gap: 1.5rem;
 
         h5 {
@@ -422,13 +424,12 @@ p {
     }
   }
 }
-
 // Clients Section End
 
 // Team Section Start
 .team {
-  padding-top: 3rem;
-  border-top: 1px solid rgba(128, 128, 128, 0.244);
+  padding-block: 4.8rem;
+  border-top: 1.2px solid rgba(128, 128, 128, 0.244);
   display: flex;
   flex-direction: column;
   gap: 3rem;
@@ -440,7 +441,6 @@ p {
 
     p {
       font-size: 1.8rem;
-      font-weight: 360;
     }
   }
 
@@ -450,11 +450,8 @@ p {
     gap: 3rem;
 
     .team-member {
-      flex: 1;
-
       h5 {
-        font-size: 2.8rem;
-        font-weight: 360;
+        font-size: 2.4rem;
       }
 
       .team-member-img {
@@ -468,7 +465,6 @@ p {
 
         h6 {
           font-size: 1.3rem;
-          font-weight: 360;
         }
 
         .socials {
@@ -482,9 +478,9 @@ p {
           }
         }
       }
+
       p {
         font-size: 1.6rem;
-        font-weight: 400;
         color: $light-text-color;
         margin-top: 2rem;
       }
@@ -497,6 +493,7 @@ p {
 footer {
   padding-block: 3rem;
   background-color: $black;
+  color: $white;
 
   button.primary-btn {
     background-color: $white;
@@ -504,10 +501,10 @@ footer {
   }
 
   .footer-top {
-    padding-block: 10rem;
+    padding-block: 6rem;
     text-align: center;
 
-    h1.secondary-heading {
+    .secondary-heading {
       color: $white;
       margin-block: 2rem;
       font-size: 3.6rem;
@@ -517,7 +514,7 @@ footer {
   hr {
     border: none;
     background-color: rgba(121, 121, 121, 0.991);
-    height: 1px;
+    height: 1.2px;
   }
 
   .footer-bottom {
@@ -531,15 +528,13 @@ footer {
       flex-direction: column;
       gap: 3rem;
 
-      img {
+      .logo {
         width: 9rem;
         height: auto;
       }
 
       h6 {
-        font-size: 2rem;
-        font-weight: 360;
-        color: $white;
+        font-size: 1.8rem;
       }
 
       ul {
@@ -548,14 +543,13 @@ footer {
         gap: 2rem;
         font-size: 1.3rem;
         text-transform: uppercase;
-        font-weight: 400;
 
         li {
           a {
             color: $white;
             display: flex;
-            gap: 1rem;
             align-items: center;
+            gap: 1rem;
 
             span {
               width: 4rem;
@@ -575,8 +569,7 @@ footer {
 
   .developed-by {
     color: $light-text-color;
-    font-size: 1.5rem;
-    font-weight: 360;
+    font-size: 1.3rem;
     text-transform: uppercase;
   }
 }
