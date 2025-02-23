@@ -52,6 +52,38 @@
     }
   }
   // Selected Work Section End
+
+  // Clients Section Start
+  .clients-data {
+    .client-data {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      & > div {
+        flex-direction: row;
+        align-items: center;
+        gap: 3rem;
+      }
+    }
+  }
+  // Clients Section End
+
+  // Team Section Start
+  .team {
+    .team-members {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  // Team Section End
+
+  // Footer Start
+  footer {
+    .footer-bottom {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  // Footer End
 }
 
 /* General Styles for screen size >= 768px */
@@ -253,4 +285,41 @@
     }
   }
   // Selected Work Section End
+
+  // Clients Section Start
+  .clients {
+    img {
+      width: 30%;
+      display: block;
+      margin-left: auto;
+    }
+
+    .clients-data {
+      width: 60%;
+      margin-left: auto;
+
+      .client-data {
+        h5 {
+          font-size: clamp(10px, 2.5vw, 32px);
+        }
+      }
+    }
+  }
+  // Clients Section End
+
+  // Team Section Start
+  .team {
+    .team-members {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  // Team Section End
+
+  // Footer Start
+  footer {
+    .footer-bottom {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  // Footer End
 }
