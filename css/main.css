@@ -89,6 +89,7 @@ p {
   align-items: center;
   position: relative;
   padding-top: 2.2rem;
+  padding-bottom: 1rem;
 }
 .navbar .logo {
   width: 6rem;
