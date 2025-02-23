@@ -281,7 +281,7 @@ p {
   align-items: center;
   text-transform: uppercase;
   font-size: 1.3rem;
-  color: #fff;
+  color: #000;
 }
 .services .services-text .services-boxes .service-box > a span {
   width: 4rem;
@@ -333,6 +333,7 @@ p {
   align-items: center;
   text-transform: uppercase;
   font-size: 1.3rem;
+  color: #000;
 }
 .selected-work .selected-work-boxes > div:last-child > a span {
   width: 4rem;
