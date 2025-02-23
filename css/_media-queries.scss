@@ -25,10 +25,11 @@
 
 /* General Styles for screen size >= 490px */
 @media screen and (min-width: 490px) {
-  .site-wrapper {
+  .common-padding-inline {
     padding-inline: 3rem;
   }
 
+  // Navbar Start
   .navbar {
     .navbar-right {
       .toggle-btns {
@@ -38,22 +39,66 @@
       }
     }
   }
+  // Navbar End
+
+  // Selected Work Section Start
+  .selected-work {
+    .selected-work-boxes {
+      flex-direction: row;
+    }
+
+    .selected-work-boxes:last-child {
+      flex-direction: row-reverse;
+    }
+  }
+  // Selected Work Section End
 }
 
 /* General Styles for screen size >= 768px */
 @media screen and (min-width: 768px) {
-  .site-wrapper {
+  .primary-heading {
+    font-size: clamp(40px, 6.5vw, 96px);
+  }
+
+  .secondary-heading {
+    font-size: clamp(30px, 5.5vw, 80px);
+  }
+
+  .common-padding-inline {
     padding-inline: 5rem;
   }
 
   .navbar {
     padding-block: 2.5rem;
   }
+
+  // Services Section Start
+  .services {
+    .services-text {
+      .services-boxes {
+        grid-template-columns: 1fr 1fr;
+        gap: 5rem;
+      }
+    }
+  }
+  // Services Section End
+
+  // Selected Work Section Start
+  .selected-work {
+    .selected-work-boxes {
+      & > div:last-child {
+        h4 {
+          font-size: 5.6rem;
+        }
+      }
+    }
+  }
+  // Selected Work Section End
 }
 
 /* General Styles for screen size >= 1200px */
 @media screen and (min-width: 990px) {
-  .site-wrapper {
+  .common-padding-inline {
     padding-inline: 6rem;
   }
 
@@ -133,19 +178,79 @@
       }
 
       .hero-bottom-text {
+        padding-block: 2rem;
         flex: 1;
-
-        h1 {
-          font-size: calc(5.4vw, 5.4vw, 110px);
-        }
 
         p {
           font-size: 2.2rem;
-          font-weight: bold;
-          margin-block: 2rem 4rem;
+          font-weight: 400;
         }
       }
     }
   }
   // Hero Section End
+
+  // Tailored Section Start
+  .tailored {
+    flex-direction: row;
+    gap: 5rem;
+
+    .tailored-img {
+      flex: 0.5;
+    }
+
+    .tailored-text {
+      flex: 1;
+      flex-direction: row-reverse;
+      padding-block: 2rem;
+
+      & > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        p {
+          width: 75%;
+        }
+      }
+    }
+  }
+  // Tailored Section End
+
+  // Services Section Start
+  .services {
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+
+    .services-text {
+      flex: 1;
+      padding-block: 2rem;
+    }
+
+    .services-img {
+      flex: 1;
+    }
+  }
+  // Services Section End
+
+  // Selected Work Section Start
+  .selected-work {
+    gap: 5rem;
+
+    .selected-work-boxes {
+      flex-direction: row;
+
+      & > div:nth-child(2) {
+        display: initial;
+      }
+
+      & > div:last-child {
+        h4 {
+          font-size: clamp(20px, 4.5vw, 64px);
+        }
+      }
+    }
+  }
+  // Selected Work Section End
 }

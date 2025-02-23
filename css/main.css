@@ -17,6 +17,20 @@
   display: none;
 }
 
+.primary-heading {
+  font-size: 4.4rem;
+  font-weight: 360;
+}
+
+.secondary-heading {
+  font-size: 4rem;
+  font-weight: 360;
+}
+
+.common-padding-inline {
+  padding-inline: 2.3rem;
+}
+
 *,
 *::before,
 *::after {
@@ -51,6 +65,7 @@ ul {
 img {
   max-width: 100%;
   width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -63,10 +78,16 @@ h5,
 h6 {
   text-transform: uppercase;
   font-family: "Mulish", serif;
+  letter-spacing: 0.3px;
+  line-height: 1;
 }
 
-.site-wrapper {
-  padding-inline: 2.3rem;
+p {
+  letter-spacing: 0.3px;
+}
+
+.site-wrapper > section {
+  margin-bottom: 5rem;
 }
 
 .navbar {
@@ -166,21 +187,13 @@ h6 {
   text-transform: uppercase;
 }
 .hero .hero-bottom {
-  margin-top: 2rem;
+  margin-top: 3rem;
   display: flex;
   flex-direction: column;
   gap: 3rem;
 }
 .hero .hero-bottom .hero-bottom-img {
   aspect-ratio: 1;
-}
-.hero .hero-bottom .hero-bottom-img img {
-  height: 100%;
-}
-.hero .hero-bottom .hero-bottom-text h1 {
-  font-size: 4rem;
-  font-weight: 360;
-  line-height: 1;
 }
 .hero .hero-bottom .hero-bottom-text p {
   font-size: 1.8rem;
@@ -199,6 +212,131 @@ h6 {
 .hero .hero-bottom .hero-bottom-text .hero-bottom-services .service h4 {
   font-size: 2.7rem;
   font-weight: 360;
+}
+
+.tailored {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.tailored .tailored-text {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+}
+.tailored .tailored-text > p {
+  writing-mode: vertical-rl;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+}
+.tailored .tailored-text > div p {
+  font-size: 1.8rem;
+  font-weight: 360;
+  color: grey;
+  margin-top: 2rem;
+}
+
+.services {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.services .services-text .services-boxes {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+.services .services-text .services-boxes .service-box {
+  padding-top: 2rem;
+  border-top: 1px solid rgba(128, 128, 128, 0.477);
+}
+.services .services-text .services-boxes .service-box h4 {
+  font-size: 2.4rem;
+  font-weight: 400;
+}
+.services .services-text .services-boxes .service-box p {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: grey;
+  margin-top: 2rem;
+}
+.services .services-text .services-boxes .service-box > div {
+  margin-top: 3rem;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+.services .services-text .services-boxes .service-box > div a {
+  width: 4rem;
+  aspect-ratio: 1;
+  display: grid;
+  place-content: center;
+  background-color: #000;
+  color: #fff;
+  font-size: 2rem;
+  transform: rotate(45deg);
+  border-radius: 50%;
+}
+.services .services-text .services-boxes .service-box > div span {
+  text-transform: uppercase;
+  font-size: 1.3rem;
+}
+
+.selected-work {
+  padding-top: 3rem;
+  border-top: 1px solid rgba(128, 128, 128, 0.244);
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.selected-work .selected-work-boxes {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.selected-work .selected-work-boxes > div {
+  flex: 1;
+}
+.selected-work .selected-work-boxes > div:nth-child(2) {
+  display: none;
+}
+.selected-work .selected-work-boxes > div:last-child {
+  padding-block: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.selected-work .selected-work-boxes > div:last-child h4 {
+  font-size: 3.6rem;
+  font-weight: 400;
+}
+.selected-work .selected-work-boxes > div:last-child p {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: grey;
+  margin-top: 2rem;
+}
+.selected-work .selected-work-boxes > div:last-child > div:last-child {
+  margin-top: 3rem;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+.selected-work .selected-work-boxes > div:last-child > div:last-child a {
+  width: 4rem;
+  aspect-ratio: 1;
+  display: grid;
+  place-content: center;
+  background-color: #000;
+  color: #fff;
+  font-size: 2rem;
+  transform: rotate(45deg);
+  border-radius: 50%;
+}
+.selected-work .selected-work-boxes > div:last-child > div:last-child span {
+  text-transform: uppercase;
+  font-size: 1.3rem;
 }
 
 /* General Styles for screen size <= 300px */
@@ -224,25 +362,44 @@ h6 {
 }
 /* General Styles for screen size >= 490px */
 @media screen and (min-width: 490px) {
-  .site-wrapper {
+  .common-padding-inline {
     padding-inline: 3rem;
   }
   .navbar .navbar-right .toggle-btns button {
     display: initial;
   }
+  .selected-work .selected-work-boxes {
+    flex-direction: row;
+  }
+  .selected-work .selected-work-boxes:last-child {
+    flex-direction: row-reverse;
+  }
 }
 /* General Styles for screen size >= 768px */
 @media screen and (min-width: 768px) {
-  .site-wrapper {
+  .primary-heading {
+    font-size: clamp(40px, 6.5vw, 96px);
+  }
+  .secondary-heading {
+    font-size: clamp(30px, 5.5vw, 80px);
+  }
+  .common-padding-inline {
     padding-inline: 5rem;
   }
   .navbar {
     padding-block: 2.5rem;
   }
+  .services .services-text .services-boxes {
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+  }
+  .selected-work .selected-work-boxes > div:last-child h4 {
+    font-size: 5.6rem;
+  }
 }
 /* General Styles for screen size >= 1200px */
 @media screen and (min-width: 990px) {
-  .site-wrapper {
+  .common-padding-inline {
     padding-inline: 6rem;
   }
   .navbar {
@@ -300,13 +457,55 @@ h6 {
     flex: 1;
   }
   .hero .hero-bottom .hero-bottom-text {
+    padding-block: 2rem;
     flex: 1;
-  }
-  .hero .hero-bottom .hero-bottom-text h1 {
-    font-size: 5.4vw;
   }
   .hero .hero-bottom .hero-bottom-text p {
     font-size: 2.2rem;
-    margin-block: 2rem 4rem;
+    font-weight: 400;
+  }
+  .tailored {
+    flex-direction: row;
+    gap: 5rem;
+  }
+  .tailored .tailored-img {
+    flex: 0.5;
+  }
+  .tailored .tailored-text {
+    flex: 1;
+    flex-direction: row-reverse;
+    padding-block: 2rem;
+  }
+  .tailored .tailored-text > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .tailored .tailored-text > div p {
+    width: 75%;
+  }
+  .services {
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+  }
+  .services .services-text {
+    flex: 1;
+    padding-block: 2rem;
+  }
+  .services .services-img {
+    flex: 1;
+  }
+  .selected-work {
+    gap: 5rem;
+  }
+  .selected-work .selected-work-boxes {
+    flex-direction: row;
+  }
+  .selected-work .selected-work-boxes > div:nth-child(2) {
+    display: initial;
+  }
+  .selected-work .selected-work-boxes > div:last-child h4 {
+    font-size: clamp(20px, 4.5vw, 64px);
   }
 }
