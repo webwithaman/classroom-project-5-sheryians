@@ -32,6 +32,10 @@
   // Navbar Start
   .navbar {
     .navbar-right {
+      .nav-links {
+        width: calc(100% - 3rem - 3rem);
+      }
+
       .toggle-btns {
         button {
           display: initial;
@@ -45,6 +49,10 @@
   .selected-work {
     .selected-work-boxes {
       flex-direction: row;
+
+      & > div:last-child {
+        padding-block: 2rem;
+      }
     }
 
     .selected-work-boxes:last-child {
@@ -88,21 +96,49 @@
 
 /* General Styles for screen size >= 768px */
 @media screen and (min-width: 768px) {
-  .primary-heading {
-    font-size: clamp(40px, 6.5vw, 96px);
-  }
-
-  .secondary-heading {
-    font-size: clamp(30px, 5.5vw, 80px);
-  }
-
   .common-padding-inline {
     padding-inline: 5rem;
   }
 
-  .navbar {
-    padding-block: 2.5rem;
+  .primary-heading {
+    font-size: 7.2rem;
   }
+
+  .secondary-heading {
+    font-size: 6.4rem;
+  }
+
+  // Navbar Start
+  .navbar {
+    padding-top: 2.5rem;
+
+    .navbar-right {
+      .nav-links {
+        width: calc(100% - 5rem - 5rem);
+      }
+    }
+  }
+  // Navbar End
+
+  // Hero Section Start
+  .hero {
+    .hero-bottom {
+      .hero-bottom-text {
+        p {
+          font-size: 2.2rem;
+        }
+
+        .hero-bottom-services {
+          .service {
+            h4 {
+              font-size: 3.2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  // Hero Section End
 
   // Services Section Start
   .services {
@@ -126,6 +162,20 @@
     }
   }
   // Selected Work Section End
+
+  // Clients Section Start
+  .clients {
+    .clients-data {
+      .client-data {
+        & > div {
+          h5 {
+            font-size: 3.2rem;
+          }
+        }
+      }
+    }
+  }
+  // Clients Section End
 }
 
 /* General Styles for screen size >= 1200px */
@@ -134,9 +184,46 @@
     padding-inline: 6rem;
   }
 
+  .primary-heading {
+    font-size: clamp(40px, 6.5vw, 96px);
+  }
+
+  .secondary-heading {
+    font-size: clamp(30px, 5vw, 80px);
+  }
+
+  .primary-btn {
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+
+      span {
+        transition: all 0.2s linear;
+        padding-block: 3px;
+      }
+
+      &:hover span:first-child {
+        transform: translateY(-100%);
+      }
+
+      span:last-child {
+        position: absolute;
+        top: 100%;
+        display: initial;
+      }
+
+      &:hover span:last-child {
+        top: 0;
+      }
+    }
+  }
+
   // Navbar Start
   .navbar {
-    padding-block: 3.5rem;
+    padding-top: 3.2rem;
 
     .navbar-right {
       .nav-links {
@@ -194,6 +281,8 @@
 
   // Hero Section Start
   .hero {
+    padding-top: 4.8rem;
+
     .hero-top-text {
       & > div {
         margin-top: 1.3rem;
@@ -201,7 +290,6 @@
     }
 
     .hero-bottom {
-      margin-top: 5rem;
       flex-direction: row-reverse;
       gap: 5rem;
 
@@ -210,12 +298,14 @@
       }
 
       .hero-bottom-text {
-        padding-block: 2rem;
         flex: 1;
 
-        p {
-          font-size: 2.2rem;
-          font-weight: 400;
+        .hero-bottom-services {
+          .service {
+            h4 {
+              font-size: clamp(20px, 2.25vw, 32px);
+            }
+          }
         }
       }
     }
@@ -224,6 +314,7 @@
 
   // Tailored Section Start
   .tailored {
+    padding-top: 4.8rem;
     flex-direction: row;
     gap: 5rem;
 
@@ -237,10 +328,6 @@
       padding-block: 2rem;
 
       & > div {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-
         p {
           width: 75%;
         }
@@ -251,6 +338,7 @@
 
   // Services Section Start
   .services {
+    padding-block: 12.8rem;
     display: flex;
     flex-direction: row;
     gap: 5rem;
@@ -258,6 +346,14 @@
     .services-text {
       flex: 1;
       padding-block: 2rem;
+
+      .services-boxes {
+        .service-box {
+          h4 {
+            font-size: clamp(10px, 1.75vw, 24px);
+          }
+        }
+      }
     }
 
     .services-img {
@@ -268,6 +364,7 @@
 
   // Selected Work Section Start
   .selected-work {
+    padding-top: 6.4rem;
     gap: 5rem;
 
     .selected-work-boxes {
@@ -288,6 +385,8 @@
 
   // Clients Section Start
   .clients {
+    padding-block: 6.5rem;
+
     img {
       width: 30%;
       display: block;
@@ -299,8 +398,10 @@
       margin-left: auto;
 
       .client-data {
-        h5 {
-          font-size: clamp(10px, 2.5vw, 32px);
+        & > div {
+          h5 {
+            font-size: clamp(10px, 2.5vw, 32px);
+          }
         }
       }
     }
