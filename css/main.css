@@ -281,6 +281,7 @@ p {
   align-items: center;
   text-transform: uppercase;
   font-size: 1.3rem;
+  color: #fff;
 }
 .services .services-text .services-boxes .service-box > a span {
   width: 4rem;
