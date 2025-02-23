@@ -10,7 +10,7 @@
   font-weight: 400;
   padding: 0.8em 1.5em;
   letter-spacing: 0.2px;
-  border-radius: 2rem;
+  border-radius: 3rem;
   text-transform: uppercase;
 }
 .primary-btn div span:last-child {
@@ -436,7 +436,7 @@ footer .footer-top {
   padding-block: 6rem;
   text-align: center;
 }
-footer .footer-top .secondary-heading {
+footer .footer-top h1 {
   color: #fff;
   margin-block: 2rem;
   font-size: 3.6rem;
@@ -583,6 +583,9 @@ footer .developed-by {
   }
   .clients .clients-data .client-data > div h5 {
     font-size: 3.2rem;
+  }
+  footer .footer-top h1 {
+    font-size: 5.6rem;
   }
 }
 /* General Styles for screen size >= 1200px */
@@ -754,6 +757,11 @@ footer .developed-by {
   }
   .team .team-members .team-member h5 {
     font-size: clamp(10px, 1.75vw, 24px);
+  }
+  footer .footer-top h1 {
+    font-size: clamp(20px, 4.5vw, 64px);
+    width: 70%;
+    margin-inline: auto;
   }
   footer .footer-bottom {
     grid-template-columns: repeat(4, 1fr);

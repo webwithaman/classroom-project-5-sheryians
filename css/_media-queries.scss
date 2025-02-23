@@ -176,6 +176,16 @@
     }
   }
   // Clients Section End
+
+  // Footer Start
+  footer {
+    .footer-top {
+      h1 {
+        font-size: 5.6rem;
+      }
+    }
+  }
+  // Footer Start
 }
 
 /* General Styles for screen size >= 1200px */
@@ -430,6 +440,14 @@
 
   // Footer Start
   footer {
+    .footer-top {
+      h1 {
+        font-size: clamp(20px, 4.5vw, 64px);
+        width: 70%;
+        margin-inline: auto;
+      }
+    }
+
     .footer-bottom {
       grid-template-columns: repeat(4, 1fr);
     }
