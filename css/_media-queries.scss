@@ -300,9 +300,6 @@
     }
 
     .hero-bottom {
-      flex-direction: row-reverse;
-      gap: 5rem;
-
       .hero-bottom-img {
         flex: 1;
       }
@@ -325,8 +322,6 @@
   // Tailored Section Start
   .tailored {
     padding-top: 4.8rem;
-    flex-direction: row;
-    gap: 5rem;
 
     .tailored-img {
       flex: 0.5;
@@ -334,7 +329,6 @@
 
     .tailored-text {
       flex: 1;
-      flex-direction: row-reverse;
       padding-block: 2rem;
 
       & > div {
@@ -349,9 +343,6 @@
   // Services Section Start
   .services {
     padding-block: 12.8rem;
-    display: flex;
-    flex-direction: row;
-    gap: 5rem;
 
     .services-text {
       flex: 1;
@@ -375,7 +366,6 @@
   // Selected Work Section Start
   .selected-work {
     padding-top: 6.4rem;
-    gap: 5rem;
 
     .selected-work-boxes {
       flex-direction: row;
@@ -408,11 +398,7 @@
       margin-left: auto;
 
       .client-data {
-        flex-direction: row;
-
         & > div {
-          flex-direction: row;
-
           h5 {
             font-size: clamp(10px, 2.5vw, 32px);
           }

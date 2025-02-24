@@ -178,6 +178,12 @@ p {
   flex-direction: column;
   gap: 3rem;
 }
+@media (min-width: 990px) {
+  .hero {
+    flex-direction: column;
+    gap: 3rem;
+  }
+}
 .hero .hero-top-text > div {
   display: flex;
   justify-content: space-between;
@@ -191,6 +197,12 @@ p {
   display: flex;
   flex-direction: column;
   gap: 3rem;
+}
+@media (min-width: 990px) {
+  .hero .hero-bottom {
+    flex-direction: row-reverse;
+    gap: 5rem;
+  }
 }
 .hero .hero-bottom .hero-bottom-img {
   aspect-ratio: 1;
@@ -209,6 +221,12 @@ p {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+}
+@media (min-width: 990px) {
+  .hero .hero-bottom .hero-bottom-text .hero-bottom-services {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
 }
 .hero .hero-bottom .hero-bottom-text .hero-bottom-services hr {
   border: none;
@@ -229,10 +247,22 @@ p {
   flex-direction: column;
   gap: 3rem;
 }
+@media (min-width: 990px) {
+  .tailored {
+    flex-direction: row;
+    gap: 5rem;
+  }
+}
 .tailored .tailored-text {
   display: flex;
   flex-direction: row;
   gap: 3rem;
+}
+@media (min-width: 990px) {
+  .tailored .tailored-text {
+    flex-direction: row-reverse;
+    gap: 3rem;
+  }
 }
 .tailored .tailored-text > p {
   writing-mode: vertical-rl;
@@ -255,6 +285,12 @@ p {
   display: flex;
   flex-direction: column;
   gap: 3rem;
+}
+@media (min-width: 990px) {
+  .services {
+    flex-direction: row;
+    gap: 5rem;
+  }
 }
 .services .services-text .services-boxes {
   margin-top: 3rem;
@@ -303,10 +339,22 @@ p {
   flex-direction: column;
   gap: 3rem;
 }
+@media (min-width: 990px) {
+  .selected-work {
+    flex-direction: column;
+    gap: 3rem;
+  }
+}
 .selected-work .selected-work-boxes {
   display: flex;
   flex-direction: column;
   gap: 3rem;
+}
+@media (min-width: 990px) {
+  .selected-work .selected-work-boxes {
+    flex-direction: row;
+    gap: 3rem;
+  }
 }
 .selected-work .selected-work-boxes > div {
   flex: 1;
@@ -360,8 +408,14 @@ p {
 .clients .clients-data .client-data {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 1.5rem;
+  align-items: center;
+}
+@media (min-width: 990px) {
+  .clients .clients-data .client-data {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
 }
 .clients .clients-data .client-data p {
   text-transform: uppercase;
@@ -370,8 +424,14 @@ p {
 .clients .clients-data .client-data > div {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 1.5rem;
+  align-items: center;
+}
+@media (min-width: 990px) {
+  .clients .clients-data .client-data > div {
+    flex-direction: row;
+    gap: 3rem;
+  }
 }
 .clients .clients-data .client-data > div h5 {
   font-size: 2.8rem;
@@ -384,10 +444,22 @@ p {
   flex-direction: column;
   gap: 3rem;
 }
+@media (min-width: 990px) {
+  .team {
+    flex-direction: column;
+    gap: 5rem;
+  }
+}
 .team .team-header {
   display: flex;
   flex-direction: column;
   gap: 3rem;
+}
+@media (min-width: 990px) {
+  .team .team-header {
+    flex-direction: row;
+    gap: 5rem;
+  }
 }
 .team .team-header p {
   font-size: 1.8rem;
@@ -470,9 +542,15 @@ footer .footer-bottom .footer-links h6 {
 footer .footer-bottom .footer-links ul {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.7rem;
   font-size: 1.3rem;
   text-transform: uppercase;
+}
+@media (min-width: 990px) {
+  footer .footer-bottom .footer-links ul {
+    flex-direction: column;
+    gap: 2rem;
+  }
 }
 footer .footer-bottom .footer-links ul li a {
   color: #fff;
@@ -673,10 +751,6 @@ footer .developed-by {
   .hero .hero-top-text > div {
     margin-top: 1.3rem;
   }
-  .hero .hero-bottom {
-    flex-direction: row-reverse;
-    gap: 5rem;
-  }
   .hero .hero-bottom .hero-bottom-img {
     flex: 1;
   }
@@ -688,15 +762,12 @@ footer .developed-by {
   }
   .tailored {
     padding-top: 4.8rem;
-    flex-direction: row;
-    gap: 5rem;
   }
   .tailored .tailored-img {
     flex: 0.5;
   }
   .tailored .tailored-text {
     flex: 1;
-    flex-direction: row-reverse;
     padding-block: 2rem;
   }
   .tailored .tailored-text > div p {
@@ -704,9 +775,6 @@ footer .developed-by {
   }
   .services {
     padding-block: 12.8rem;
-    display: flex;
-    flex-direction: row;
-    gap: 5rem;
   }
   .services .services-text {
     flex: 1;
@@ -720,7 +788,6 @@ footer .developed-by {
   }
   .selected-work {
     padding-top: 6.4rem;
-    gap: 5rem;
   }
   .selected-work .selected-work-boxes {
     flex-direction: row;
@@ -742,12 +809,6 @@ footer .developed-by {
   .clients .clients-data {
     width: 60%;
     margin-left: auto;
-  }
-  .clients .clients-data .client-data {
-    flex-direction: row;
-  }
-  .clients .clients-data .client-data > div {
-    flex-direction: row;
   }
   .clients .clients-data .client-data > div h5 {
     font-size: clamp(10px, 2.5vw, 32px);
