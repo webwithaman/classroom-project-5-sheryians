@@ -62,16 +62,18 @@
   // Selected Work Section End
 
   // Clients Section Start
-  .clients-data {
-    .client-data {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-
-      & > div {
+  .clients {
+    .clients-data {
+      .client-data {
         flex-direction: row;
+        justify-content: space-between;
         align-items: center;
-        gap: 3rem;
+
+        & > div {
+          flex-direction: row;
+          align-items: center;
+          gap: 3rem;
+        }
       }
     }
   }

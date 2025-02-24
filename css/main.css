@@ -29,6 +29,27 @@
   padding-inline: 2.3rem;
 }
 
+.visit-to {
+  margin-top: 3rem;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  color: #000;
+}
+.visit-to span {
+  width: 4rem;
+  aspect-ratio: 1;
+  display: grid;
+  place-content: center;
+  background-color: #000;
+  color: #fff;
+  font-size: 2rem;
+  transform: rotate(45deg);
+  border-radius: 50%;
+}
+
 *,
 *::before,
 *::after {
@@ -311,26 +332,6 @@ p {
   color: grey;
   margin-top: 2rem;
 }
-.services .services-text .services-boxes .service-box > a {
-  margin-top: 3rem;
-  display: flex;
-  gap: 1.5rem;
-  align-items: center;
-  text-transform: uppercase;
-  font-size: 1.3rem;
-  color: #000;
-}
-.services .services-text .services-boxes .service-box > a span {
-  width: 4rem;
-  aspect-ratio: 1;
-  display: grid;
-  place-content: center;
-  background-color: #000;
-  color: #fff;
-  font-size: 2rem;
-  transform: rotate(45deg);
-  border-radius: 50%;
-}
 
 .selected-work {
   padding-top: 3rem;
@@ -375,26 +376,6 @@ p {
   color: grey;
   margin-top: 2rem;
 }
-.selected-work .selected-work-boxes > div:last-child > a {
-  margin-top: 3rem;
-  display: flex;
-  gap: 1.5rem;
-  align-items: center;
-  text-transform: uppercase;
-  font-size: 1.3rem;
-  color: #000;
-}
-.selected-work .selected-work-boxes > div:last-child > a span {
-  width: 4rem;
-  aspect-ratio: 1;
-  display: grid;
-  place-content: center;
-  background-color: #000;
-  color: #fff;
-  font-size: 2rem;
-  transform: rotate(45deg);
-  border-radius: 50%;
-}
 
 .clients {
   padding-block: 4.8rem;
@@ -404,6 +385,12 @@ p {
   display: flex;
   flex-direction: column;
   gap: 3rem;
+}
+@media (min-width: 990px) {
+  .clients .clients-data {
+    flex-direction: column;
+    gap: 3rem;
+  }
 }
 .clients .clients-data .client-data {
   display: flex;
@@ -615,12 +602,12 @@ footer .developed-by {
   .selected-work .selected-work-boxes:last-child {
     flex-direction: row-reverse;
   }
-  .clients-data .client-data {
+  .clients .clients-data .client-data {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
-  .clients-data .client-data > div {
+  .clients .clients-data .client-data > div {
     flex-direction: row;
     align-items: center;
     gap: 3rem;

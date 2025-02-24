@@ -299,28 +299,6 @@ p {
           color: $light-text-color;
           margin-top: 2rem;
         }
-
-        & > a {
-          margin-top: 3rem;
-          display: flex;
-          gap: 1.5rem;
-          align-items: center;
-          text-transform: uppercase;
-          font-size: 1.3rem;
-          color: $black;
-
-          span {
-            width: 4rem;
-            aspect-ratio: 1;
-            display: grid;
-            place-content: center;
-            background-color: $black;
-            color: $white;
-            font-size: 2rem;
-            transform: rotate(45deg);
-            border-radius: 50%;
-          }
-        }
       }
     }
   }
@@ -358,28 +336,6 @@ p {
         color: $light-text-color;
         margin-top: 2rem;
       }
-
-      & > a {
-        margin-top: 3rem;
-        display: flex;
-        gap: 1.5rem;
-        align-items: center;
-        text-transform: uppercase;
-        font-size: 1.3rem;
-        color: $black;
-
-        span {
-          width: 4rem;
-          aspect-ratio: 1;
-          display: grid;
-          place-content: center;
-          background-color: $black;
-          color: $white;
-          font-size: 2rem;
-          transform: rotate(45deg);
-          border-radius: 50%;
-        }
-      }
     }
   }
 }
@@ -391,9 +347,7 @@ p {
 
   .clients-data {
     margin-top: 3rem;
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
+    @include flex-properties($des-dir: column, $des-gap: 3rem);
 
     .client-data {
       @include flex-properties($mob-gap: 1.5rem, $des-gap: 1.5rem);
