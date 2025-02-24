@@ -755,6 +755,14 @@ footer .developed-by {
   .team {
     padding-block: 6.4rem;
   }
+  .team .team-header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .team .team-header p {
+    width: 50%;
+    padding-top: 1rem;
+  }
   .team .team-members {
     grid-template-columns: repeat(4, 1fr);
   }

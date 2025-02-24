@@ -426,6 +426,16 @@
   .team {
     padding-block: 6.4rem;
 
+    .team-header {
+      flex-direction: row;
+      justify-content: space-between;
+
+      p {
+        width: 50%;
+        padding-top: 1rem;
+      }
+    }
+
     .team-members {
       grid-template-columns: repeat(4, 1fr);
 
